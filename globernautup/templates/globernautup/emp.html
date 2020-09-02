@@ -1,0 +1,94 @@
+{% extends 'webapp/base.html' %}
+
+{% block content %}
+<style>
+    #canvas ul{
+        list-style: none;
+        border-bottom: 1px soid gray !important;
+    }
+    #canvas ol{
+        font-size: 11px;
+        border-top: 1px dotted #aaa;
+        margin:10px 0px;
+        padding: 10px;
+        display:none;
+    }
+    #canvas .fa-plus-circle{
+        cursor: pointer;
+    }
+    #canvas input{
+        margin: 10px 0px;
+    }
+    #canvas li{
+        padding: 20px;
+    }
+    #canvas li div{
+        font-weight: bolder;
+    }
+</style>
+<section id="canvas">
+    <ul class="row">
+        <li class="col-md-6 col-sm-6 col-lg-6 col-xl-6">
+            <div>What do they HEAR?</div>
+            <div>
+                <i class="fas fa-plus-circle righter" style="float:right;"></i>
+                <textarea rows="3" class="form-control" >What do they HEAR?</textarea>
+            </div>
+        </li>
+        <li class="col-md-6 col-sm-6 col-lg-6 col-xl-6">
+            <div>What do they SEE?</div>
+            <div>
+                <i class="fas fa-plus-circle righter" style="float:right;"></i>
+                <textarea rows="3" class="form-control" >What do they SEE?</textarea>
+            </div>
+        </li>
+    </ul>
+<hr>
+    <ul class="row">
+        <li class="col-md-12 col-sm-12 col-lg-12 col-xl-12">
+            <div>WHO are we empathizing with?</div>
+            <div>
+                <textarea rows="3" class="form-control" >WHO are we empathizing with?</textarea>
+            </div>
+        </li>
+    </ul>
+    <hr>
+    <ul class="row">
+        <li class="col-md-6 col-sm-6 col-lg-6 col-xl-6">
+            <div>What do they need to DO?</div>
+            <div>
+                <i class="fas fa-plus-circle righter" style="float:right;"></i>
+                <textarea rows="3" class="form-control" >What do they need to DO?</textarea>
+            </div>
+        </li>
+        <li class="col-md-6 col-sm-6 col-lg-6 col-xl-6">
+            <div>What do they THINK and FEEL?</div>
+            <div>
+                <i class="fas fa-plus-circle righter" style="float:right;"></i>
+                <textarea rows="3" class="form-control" >What do they THINK and FEEL?</textarea>
+            </div>
+        </li>
+    </ul>
+    <hr>
+
+
+    <ul class="row">
+        <li class="col-md-6 col-sm-6 col-lg-6 col-xl-6">
+            <div>What do they SAY?</div>
+            <div>
+                <input type="text" class="form-control" style="display: inline-block;width:90%;">
+                <i class="fas fa-plus-circle"></i>
+            </div>
+        </li>
+        <li class="col-md-6 col-sm-6 col-lg-6 col-xl-6">
+            <div>What do they DO?</div>
+            <div>
+                <input type="text" class="form-control" placeholder="key partner" style="display: inline-block;width:90%;">
+                <i class="fas fa-plus-circle"></i>
+            </div>
+        </li>
+    </ul>
+
+</section>
+
+{% endblock %}

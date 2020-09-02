@@ -1,0 +1,68 @@
+{% extends 'globernaut/base.html' %}
+
+{% block content %}
+<div class="jumbotron">
+    
+    <h1 class="display-4">
+    </h1>
+    
+    <p class="lead">
+        <input type="text" name="idea_name" class="form-control form-control-lg "  placeholder="Untitled">
+        <label>named your Idea.</label>
+    </p>
+    <hr class="my-4">    
+    <p class="lead">
+       Objectives
+    </p>
+    <ul class="list-group">
+        <li class="list-group-item">
+            <h5>The What?</h5>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">What do you want to reach?</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+        </li>
+        <li class="list-group-item">
+            <h5>The How?</h5>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">How do you do?</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+        </li>
+        <li class="list-group-item">
+            <h5>From Who?</h5>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1"></label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+        </li>
+        <li class="list-group-item text-right">
+            <a class="btn btn-primary btn-lg saver" href="#" role="button">
+                <i class="fas fa-chevron-right"></i>
+            </a>
+        </li>
+      </ul>
+    
+</div>
+
+
+{% endblock %}
+
+
+<ul class="nav justify-content-end">
+    <li class="nav-item">
+        <button type="button" class="btn btn-info ">
+             Investors gave <span class="badge badge-light">400</span>
+          </button>
+    </li>
+  </ul>
+<hr>
+
+<h1>My Idea
+    <input type="text" name="idea_name" class="form-control"  placeholder="Untitled">
+</h1>
+<section>
+    <label>Objetive</label><br>
+    <textarea class="fomr-control" style="width:100%;background: none;border: 0px solid;height: auto;" rows="5" placeholder="Your objetive here"></textarea>
+</section>
+<hr>

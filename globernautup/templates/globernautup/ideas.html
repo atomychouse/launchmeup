@@ -1,0 +1,38 @@
+<div class="row">
+{% for i in ideas %}
+<div class="col-md-3 col-sm-3 col-xl-3 col-lg-3" style="padding:10px;">
+    <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{i.name}}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the bulk of the card's content.
+          
+          
+          
+          </p>
+          <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+            advance
+        </div>
+        <div class="row no-gutters align-items-center">
+            <div class="col-auto">
+            <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">{{i.advance.training}}%</div>
+            </div>
+            <div class="col">
+            <div class="progress progress-sm mr-2">
+                <div class="progress-bar bg-info" role="progressbar" style="width:{{i.advance.training}}%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            </div>
+        </div>
+
+
+          <a href="/globernautup/idea/{{forloop.counter}}" class="card-link">View</a>
+          {% if i.advance.training > 60 %}
+          <a href="#" class="card-link">Another link</a>
+          {% endif %}
+        </div>
+      </div>
+</div>
+{% endfor %}
+</div>
+

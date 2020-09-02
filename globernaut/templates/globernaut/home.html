@@ -1,0 +1,87 @@
+{% extends 'globernaut/base.html' %}
+
+{% block content %}
+<div class="jumbotron">
+    <h1 class="display-4">
+        <i class="fas fa-user-astronaut"></i>
+        Hello, Globernaut! 
+    </h1>
+    <p class="lead">
+        Welcome to the launch program.
+    </p>
+    <hr class="my-4">    
+    <p class="lead">
+        Here we learn how to launch your idea.
+    </p>
+    <ul class="list-group">
+        <li class="list-group-item">
+            <h3>Training</h3>
+            <ol>
+                <li>
+                    <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                        101 entrepreneurship curse
+                    </div>
+                    <div class="row no-gutters align-items-center">
+                        <div class="col-auto">
+                        <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">{{advance.training}}%</div>
+                        </div>
+                        <div class="col">
+                        <div class="progress progress-sm mr-2">
+                            <div class="progress-bar bg-info" role="progressbar" style="width:{{advance.training}}%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        </div>
+                    </div>
+                    </li>
+                <li>
+                    {% if advance.training > 50 %}
+                    <h2><a href="{% url 'idea' %}">Your idea</a></h2>
+                    {% endif %}
+                    <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                       Creating an idea
+                    </div>
+                    <div class="row no-gutters align-items-center">
+                        <div class="col-auto">
+                        <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">{{advance.creating}}%</div>
+                        </div>
+                        <div class="col">
+                        <div class="progress progress-sm mr-2">
+                            <div class="progress-bar bg-info" role="progressbar" style="width:{{advance.creating}}%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        </div>
+                    </div>
+                    
+                </li>
+                <li><b>Faulerie</b></li>
+            </ol>
+        </li>
+        <li class="list-group-item">
+            <h3>Team</h3>
+            <ol>
+                <li>Invite another globers into your journy</li>
+            </ol>
+        </li>
+      </ul>
+    
+</div>
+
+
+{% endblock %}
+
+
+<ul class="nav justify-content-end">
+    <li class="nav-item">
+        <button type="button" class="btn btn-info">
+             Investors gave <span class="badge badge-light">400</span>
+          </button>
+    </li>
+  </ul>
+<hr>
+
+<h1>My Idea
+    <input type="text" name="idea_name" class="form-control"  placeholder="Untitled">
+</h1>
+<section>
+    <label>Objetive</label><br>
+    <textarea class="fomr-control" style="width:100%;background: none;border: 0px solid;height: auto;" rows="5" placeholder="Your objetive here"></textarea>
+</section>
+<hr>

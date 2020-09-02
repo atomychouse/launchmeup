@@ -1,0 +1,18 @@
+{% extends 'globernautup/base.html' %}
+
+{% block content %}
+
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Hello Globernautup</h1>
+    <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+        You have 3400 points to give</a>
+  </div><hr>
+
+<section id="ideas-box">
+    {% include 'globernautup/ideas.html'%}
+</section>
+
+
+
+<hr>
+{% endblock %}
